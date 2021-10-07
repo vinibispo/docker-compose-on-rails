@@ -3,6 +3,7 @@ RUN apt-get update -qq && apt-get install -y libpq-dev
 WORKDIR /compose-on-rails
 COPY Gemfile /compose-on-rails/Gemfile
 COPY Gemfile.lock /compose-on-rails/Gemfile.lock
+RUN gem install bundler -v '2.2.27'
 RUN bundle install
 EXPOSE 3000
 COPY . /compose-on-rails
