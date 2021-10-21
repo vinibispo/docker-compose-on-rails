@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e
 
-rm -f /compose-on-rails/tmp/pids/server.pid
+bundle check || bundle install
 exec "$@"
