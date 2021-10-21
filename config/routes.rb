@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# == Route Map
+#
+
 require 'sidekiq/web'
 Sidekiq::Web.use ActionDispatch::Cookies
 Sidekiq::Web.use Rails.application.config.session_store, Rails.application.config.session_options
