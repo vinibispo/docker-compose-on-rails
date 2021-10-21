@@ -1,0 +1,13 @@
+defaults: &default 
+  host: queue
+  port: 6379
+  
+development:
+  <<: *default
+
+test:
+  <<: *default
+  db: 1
+
+production:
+  <<: *default
