@@ -18,6 +18,15 @@ services:
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     ports:
       - 3000:3000
+  
+  frontend:
+    build: ./frontend
+    depends_on:
+      - web
+    ports:
+      - 8080:8080
+    volumes:
+      - ./frontend:/home/node/app
   sidekiq:
     <<: *x-app
     command: bash -c "bundle exec sidekiq -C config/sidekiq.yml"
