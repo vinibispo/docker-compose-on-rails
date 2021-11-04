@@ -11,6 +11,7 @@ gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 gem 'pg', '~> 1.1'
 # Use Puma as the app server
 gem 'devise'
+gem 'devise-jwt', '~> 0.7.0'
 gem 'ffaker'
 gem 'puma', '~> 5.0'
 gem 'rack-cors'
